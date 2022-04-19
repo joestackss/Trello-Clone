@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019698234521",
+    "project_id": "clone-trello-f8d3b",
+    "storage_bucket": "clone-trello-f8d3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019698234521:android:e088eb246c5366fd266408",
+        "android_client_info": {
+          "package_name": "com.olamide.trelloclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019698234521-8cnvv2t1b3be0dpk23q19an5qfr3cfpf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGGz0NCgYIV08LEUoDlwqvJno8xTmMvFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019698234521-8cnvv2t1b3be0dpk23q19an5qfr3cfpf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
