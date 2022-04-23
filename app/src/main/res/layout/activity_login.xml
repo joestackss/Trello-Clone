@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity"
-    android:padding="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     >
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_sign_up_activity"
+        android:id="@+id/toolbar_sign_in_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,7 @@
         android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_sign_up_activity"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_sign_in_activity"
         tools:layout_editor_absoluteX="20dp" />
 
     <LinearLayout
@@ -79,10 +80,14 @@
             app:shapeAppearance="@style/Rounded"
             >
 
-            <com.google.android.material.textfield.TextInputEditText
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email_login_real"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/et_text_size" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -112,10 +117,13 @@
             app:shapeAppearance="@style/Rounded"
             >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password_login_real"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:textSize="@dimen/et_text_size" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,8 +174,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:gravity="right"
-            android:text="Don't have an account?"
+            android:gravity="center"
+            android:text="Don't have an account? Sign Up"
             android:textColor="@color/gray"
             android:layout_marginTop="10dp"
             android:textSize="15dp"
@@ -176,19 +184,6 @@
             android:layout_weight="1"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/noAccountSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="left"
-            android:layout_weight="2"
-            android:text="SignUp"
-            android:textColor="@color/gray"
-            android:layout_marginTop="10dp"
-            android:textSize="15dp"
-            android:textStyle="normal"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 
