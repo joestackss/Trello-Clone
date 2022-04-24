@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.olamide.trelloclone.R
 import com.olamide.trelloclone.databinding.ActivityLoginBinding
+import com.olamide.trelloclone.model.User
 
 class LoginActivity : BaseActivity() {
 
@@ -146,6 +147,18 @@ class LoginActivity : BaseActivity() {
         binding?.toolbarSignInActivity?.setNavigationOnClickListener {
             onBackPressed()
         }
+    }
+
+
+    /**
+     * A function to get the user details from the firestore database after authentication.
+     */
+    fun signInSuccess(user: User) {
+
+        hideProgressDialog()
+
+        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        this.finish()
     }
 }
 // END
