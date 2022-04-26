@@ -118,6 +118,8 @@ class LoginActivity : BaseActivity() {
     private fun showProgressDialog(text: String) {
         mProgressDialogs1 = ProgressDialog(this)
         mProgressDialogs1?.setMessage("signing in")
+        mProgressDialogs1?.setCanceledOnTouchOutside(false)
+        mProgressDialogs1?.setCancelable(false)
         mProgressDialogs1?.show()
     }
 
@@ -125,7 +127,7 @@ class LoginActivity : BaseActivity() {
     /**
      * This function is used to dismiss the progress dialog if it is visible to user.
      */
-    private fun hideProgressDialog() {
+    fun hideProgressDialog() {
         mProgressDialogs1?.dismiss()
     }
 

@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.SignUpActivity"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
     >
 
 
@@ -15,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="left"
+        android:gravity="start"
+
         >
 
 
@@ -30,25 +29,43 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_medium"
+            android:paddingStart="100dp"
+            android:paddingEnd="1dp"
+
             />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/completeAccountSetupTv"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:id="@+id/linearLayout0"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="left"
-        android:text="Complete your account setup"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_sign_up_activity" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar_sign_up_activity"
+        android:paddingStart="17dp"
+        android:paddingEnd="1dp"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/completeAccountSetupTv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="left"
+            android:text="Complete your account setup"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_sign_up_activity" />
+
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -57,8 +74,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/completeAccountSetupTv"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout0"
         android:layout_marginTop="30dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="20dp"
         >
 
         <TextView

@@ -1,10 +1,13 @@
 package com.olamide.trelloclone.firebase
 
+import android.app.Activity
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.olamide.trelloclone.activities.LoginActivity
+import com.olamide.trelloclone.activities.MainActivity
+import com.olamide.trelloclone.activities.MyProfileActivity
 import com.olamide.trelloclone.activities.SignUpActivity
 import com.olamide.trelloclone.model.User
 import com.olamide.trelloclone.utils.Constants
@@ -56,7 +59,7 @@ class FirestoreClass {
 
     // A function to SignIn using firebase and get the user details from Firestore Database.
 
-    fun signInUser(activity: LoginActivity) {
+    fun signInUser(activity: Activity) {
 
         // Here we pass the collection name from which we wants the data.
         mFireStore.collection(Constants.USERS)
@@ -72,10 +75,41 @@ class FirestoreClass {
                 // Here we have received the document snapshot which is converted into the User Data model object.
                 val loggedInUser = document.toObject(User::class.java)!!
 
+                // TODO(Step 6: Modify the parameter and check the instance of activity and send the success result to it.)
+                // START
                 // Here call a function of base activity for transferring the result to it.
-                activity.signInSuccess(loggedInUser)
+                when (activity) {
+                    is LoginActivity -> {
+                        activity.signInSuccess(loggedInUser)
+                    }
+                    is MainActivity -> {
+                        activity.updateNavigationUserDetails(loggedInUser)
+                    }
+                    is MyProfileActivity -> {
+                        activity.setUserDataInUI(loggedInUser)
+                    }
+                    // END
+                }
+                // END
             }
             .addOnFailureListener { e ->
+
+                // TODO(Step 2: Hide the progress dialog in failure function based on instance of activity.)
+                // START
+                // Here call a function of base activity for transferring the result to it.
+                when (activity) {
+                    is LoginActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is MainActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is MyProfileActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    // END
+                }
+                // END
                 Log.e(
                     activity.javaClass.simpleName,
                     "Error while getting loggedIn user details",

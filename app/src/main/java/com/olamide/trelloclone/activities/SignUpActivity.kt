@@ -114,6 +114,8 @@ class SignUpActivity : BaseActivity() {
     private fun showProgressDialog(text: String) {
         mProgressDialogs1 = ProgressDialog(this)
         mProgressDialogs1?.setMessage("signing you up")
+        mProgressDialogs1?.setCanceledOnTouchOutside(false)
+        mProgressDialogs1?.setCancelable(false)
         mProgressDialogs1?.show()
     }
 

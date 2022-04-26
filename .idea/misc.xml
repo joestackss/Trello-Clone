@@ -6,14 +6,23 @@
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable-v24/intro_page_button_round_edges.xml" value="0.1305" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable/button_round_edges.xml" value="0.149" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable/button_round_edges_stroke.xml" value="0.149" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable/ic_white_color_back_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable/nav_header_main_background.xml" value="0.1" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/drawable/shape_button_rounded.xml" value="0.1" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/font/poppins_bold.xml" value="0.10555555555555556" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/font/poppins_medium.xml" value="0.11979166666666667" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout-w936dp/dialog_progress.xml" value="0.8" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_base.xml" value="0.1272644927536232" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_intro.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_my_profile.xml" value="0.264" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/activity_splash_screen.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/content_main.xml" value="0.20729166666666668" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/layout/nav_header_main.xml" value="0.264" />
+        <entry key="..\:/Users/Olamide/Downloads/TrelloClone/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
     >
 
 
@@ -14,7 +12,8 @@
         android:id="@+id/toolbar_sign_in_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
 
         <TextView
@@ -22,29 +21,43 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:textColor="@color/black"
             android:textSize="@dimen/toolbar_title_text_size"
+            android:paddingStart="100dp"
+            android:paddingEnd="1dp"
             android:textStyle="bold"
-            android:layout_gravity="center"
             android:fontFamily="@font/poppins_medium"
             />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/welcomeBackTv"
+
+    <LinearLayout
+        android:id="@+id/linearLayout0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="left"
-        android:text="Welcome back"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/toolbar_sign_in_activity"
-        tools:layout_editor_absoluteX="20dp" />
+        android:paddingStart="17dp"
+        android:paddingEnd="1dp"
+
+        >
+
+        <TextView
+            android:id="@+id/welcomeBackTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="start"
+            android:text="@string/welcome_back"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="20dp" />
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -53,8 +66,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/welcomeBackTv"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout0"
         android:layout_marginTop="30dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="20dp"
         >
 
 
@@ -63,10 +78,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:gravity="left"
-            android:text="Email"
+            android:gravity="start"
+            android:text="@string/email"
             android:textColor="@color/gray"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,7 +89,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Enter Email"
             app:endIconMode="clear_text"
             app:endIconTint="@color/colorAccent"
             app:shapeAppearance="@style/Rounded"
@@ -85,7 +99,7 @@
                 android:id="@+id/et_email_login_real"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Email"
+                android:hint="@string/enter_email"
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/et_text_size" />
 
@@ -99,11 +113,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:gravity="left"
-            android:text="Password"
+            android:gravity="start"
+            android:text="@string/password"
             android:layout_marginTop="30dp"
             android:textColor="@color/gray"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,7 +125,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Enter Password"
             app:endIconMode="password_toggle"
             app:endIconTint="@color/colorAccent"
             app:shapeAppearance="@style/Rounded"
@@ -121,7 +134,7 @@
                 android:id="@+id/et_password_login_real"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Password"
+                android:hint="@string/enter_password"
                 android:inputType="textPassword"
                 android:textSize="@dimen/et_text_size" />
 
@@ -132,11 +145,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:gravity="right"
-            android:text="Forget your password?"
+            android:gravity="end"
+            android:text="@string/forget_your_password"
             android:textColor="@color/gray"
             android:layout_marginTop="20dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -148,7 +161,7 @@
             android:background="@drawable/button_round_edges_stroke"
             android:fontFamily="@font/poppins_black"
             android:padding="5dp"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -171,16 +184,17 @@
 
         <TextView
             android:id="@+id/noAccount"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:text="Don't have an account? Sign Up"
+            android:text="@string/don_t_have_an_account_sign_up"
             android:textColor="@color/gray"
             android:layout_marginTop="10dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="normal"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="1dp"
             android:layout_weight="1"
             app:layout_constraintTop_toTopOf="parent" />
 
